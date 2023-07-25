@@ -16,6 +16,17 @@ Spring Error 처리
      3. 별도의 응답 상태가 필요하다면 예외 클래스를 추가해야 됨  
      4. WAS까지 예외가 전달되고, WAS의 에러 요청 전달이 진행됨  
      5. 외부에서 정의한 Exception 클래스에는 @ResponseStatus를 붙여줄 수 없음  
-  3. ResponseStatusException  
+  2. ResponseStatusException  
+     장점  
+     1. 기본적인 예외 처리를 빠르게 적용할 수 있으므로 손쉽게 프로토타이핑할 수 있음
+     2. HttpStatus를 직접 설정하여 예외 클래스와의 결합도를 낮출 수 있음
+     3. 불필요하게 많은 별도의 예외 클래스를 만들지 않아도 됨
+     4. 프로그래밍 방식으로 예외를 직접 생성하므로 예외를 더욱 잘 제어할 수 있음
+    
+     단점
+     1. 직접 예외 처리를 프로그래밍하므로 일관된 예외 처리가 어려움
+     2. 예외 처리 코드가 중복될 수 있음
+     3. Spring 내부의 예외를 처리하는 것이 어려움
+     4. 예외가 WAS까지 전달되고, WAS의 에러 요청 전달이 진행됨
   4. ExceptionHandler  
   5. ControllerAdvice, RestControllerAdvice  
