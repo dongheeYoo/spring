@@ -9,8 +9,8 @@ API error에 아무런 제어가 없다면 500 에러가 나타난다.
 
 Spring Error 처리
 
-1. ExceptionResolver를 동작시켜 에러를 처리\n
-  1.ResponseStatus\n
-  2.ResponseStatusException\n
-  3.ExceptionHandler\n
-  4.ControllerAdvice, RestControllerAdvice\n
+1. ExceptionResolver를 동작시켜 에러를 처리
+  1.ResponseStatus
+  2.ResponseStatusException
+  3.ExceptionHandler
+  4.ControllerAdvice, RestControllerAdvice
